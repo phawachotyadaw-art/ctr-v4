@@ -1,1 +1,27 @@
-<html><body><h1>Courses FULL</h1></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTR v4 • Courses</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ctr.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ CTR.init(); CTR.loadCourses(); });</script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="badge">← Home</a>
+    <div class="brand">Courses</div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <input id="cq" class="input" placeholder="ค้นหาหลักสูตร / หมวดหมู่">
+      <button class="btn" onclick="CTR.searchCourse(document.getElementById('cq').value)">ค้นหา</button>
+    </div>
+    <div id="clist" class="cards"></div>
+  </main>
+
+  <footer class="footer">© CTR v4 • Courses</footer>
+</body>
+</html>
