@@ -1,1 +1,34 @@
-<html><body><h1>Trainers FULL</h1></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTR v4 • Trainers</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ctr.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      CTR.init();
+      await CTR.loadTrainers(); // โหลด + เรียงดาวมาก→น้อย
+    });
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="badge">← Home</a>
+    <div class="brand">Trainer Directory</div>
+    <div class="sub">เรียงตาม Rating (⭐ + ตัวเลข / 5)</div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <input id="q" class="input" placeholder="ค้นหา Trainer / แผนก / หลักสูตร">
+      <button class="btn" onclick="CTR.search(document.getElementById('q').value)">ค้นหา</button>
+      <span id="info" class="small"></span>
+    </div>
+    <div id="list" class="cards"></div>
+  </main>
+
+  <footer class="footer">© CTR v4 • Directory</footer>
+</body>
+</html>
