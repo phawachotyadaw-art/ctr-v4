@@ -1,1 +1,45 @@
-<html><body><h1>Profile FULL</h1></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTR v4 • Trainer Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ctr.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      CTR.init();
+      await CTR.loadTrainerProfile();
+    });
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="trainers.html" class="badge">← Directory</a>
+    <div class="brand">Trainer Profile</div>
+  </header>
+
+  <main class="wrap">
+    <section class="profile">
+      <div class="avatar-lg">👤</div>
+      <div>
+        <h2 id="tname">—</h2>
+        <div class="meta" id="tdept">—</div>
+        <div class="stars" id="trating">⭐ — / 5</div>
+        <div class="row">
+          <a href="booking.html" class="btn">จองการสอน</a>
+          <a href="rating.html" class="btn ghost">ให้ Rating</a>
+        </div>
+      </div>
+    </section>
+    <hr class="sep">
+    <section>
+      <h3>Certified Courses</h3>
+      <div id="tcourses" class="row"></div>
+    </section>
+    <section class="note small">เวอร์ชันเต็ม: ดึง Sessions/Rating History เพิ่มเติม</section>
+  </main>
+
+  <footer class="footer">© CTR v4 • Profile</footer>
+</body>
+</html>
