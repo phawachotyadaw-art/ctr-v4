@@ -1,1 +1,37 @@
-<html><body><h1>Booking FULL</h1></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTR v4 • Booking</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ctr.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ CTR.init(); CTR.prefillBooking(); });</script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="badge">← Home</a>
+    <div class="brand">Booking</div>
+  </header>
+
+  <main class="wrap">
+    <form class="form" onsubmit="CTR.submitBooking(event)">
+      <div class="grid-2">
+        <label>ชื่อผู้ขอ <input id="b_req" class="input" required></label>
+        <label>แผนก <input id="b_dept" class="input" required></label>
+        <label>หลักสูตร <input id="b_course" class="input" required placeholder="(เวอร์ชัน proxy จะเป็น dropdown)"></label>
+        <label>Trainer <input id="b_trainer" class="input" required placeholder="(เวอร์ชัน proxy จะเป็น dropdown)"></label>
+        <label>วันที่ <input id="b_date" class="input" type="date"></label>
+        <label>ผู้เข้าอบรม (คน) <input id="b_head" class="input" type="number" min="1" value="10"></label>
+        <label>ติดต่อ <input id="b_contact" class="input"></label>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn" type="submit">ส่งคำขอ</button>
+        <span id="b_msg" class="small"></span>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">© CTR v4 • Booking</footer>
+</body>
+</html>
