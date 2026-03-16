@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTR v4 • Trainers</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ctr.js"></script>
+</head>
+<body class="hr-theme">
+  <header class="topbar">
+    <a class="back" href="index.html">← Home</a>
+    <div class="brand">Trainer Directory</div>
+  </header>
+
+  <main class="wrap">
+    <div class="toolbar">
+      <input class="input" id="q" placeholder="ค้นหา Trainer / แผนก / หลักสูตร">
+      <button class="btn" onclick="alert('เวอร์ชันเต็มจะเชื่อม SharePoint และเรียงตาม Rating สูง→ต่ำ')">
+        🔄 โหลดจาก SharePoint
+      </button>
+    </div>
+
+    <div id="list" class="cards">
+      <!-- ตัวอย่างการ์ด (เดโม) -->
+      <article class="card">
+        <div class="avatar">👤</div>
+        <div class="info">
+          <div class="name">สมชาย A</div>
+          <div class="meta">Production • Courses: Safety, Kaizen • ⭐ 4.8</div>
+          <div class="actions">
+            <a class="btn ghost" href="trainer-profile.html">ดูโปรไฟล์</a>
+            <a class="btn ghost" href="booking.html">จองการสอน</a>
+            <a class="btn ghost" href="rating.html">ให้ Rating</a>
+          </div>
+        </div>
+      </article>
+      <!-- หมายเหตุ: เวอร์ชันเต็มจะเติมรายการด้วย JS จาก SharePoint -->
+    </div>
+  </main>
+
+  <footer class="footer">© CTR v4 • Directory (Template)</footer>
+</body>
+</html>
