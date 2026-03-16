@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTR v4 • Rating</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="hr-theme">
+  <header class="topbar">
+    <a class="back" href="index.html">← Home</a>
+    <div class="brand">Rating</div>
+  </header>
+
+  <main class="wrap">
+    <form class="form" onsubmit="alert('เวอร์ชันเต็มจะบันทึกลง SharePoint (Ratings)');return false;">
+      <label>เลือก Session <input class="input" placeholder="เวอร์ชันเต็มจะเป็น dropdown จาก SharePoint"></label>
+      <label>ให้ดาว (1–5) <input class="input" type="number" min="1" max="5" value="5"></label>
+      <label>ความคิดเห็น <textarea class="input" rows="4"></textarea></label>
+      <button class="btn" type="submit">ส่งคะแนน</button>
+    </form>
+  </main>
+
+  <footer class="footer">© CTR v4 • Rating (Template)</footer>
+</body>
+</html>
