@@ -1,1 +1,33 @@
-<html><body><h1>Rating FULL</h1></body></html>
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CTR v4 • Rating</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="ctr.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', ()=>{ CTR.init(); CTR.prefillRating(); });</script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="badge">← Home</a>
+    <div class="brand">Rating</div>
+  </header>
+
+  <main class="wrap">
+    <form class="form" onsubmit="CTR.submitRating(event)">
+      <div class="grid-2">
+        <label>Session <input id="r_session" class="input" required placeholder="(เวอร์ชัน proxy จะเป็น dropdown)"></label>
+        <label>ให้ดาว (1–5) <input id="r_star" class="input" type="number" min="1" max="5" value="5"></label>
+      </div>
+      <label>ความคิดเห็น <textarea id="r_cmt" class="input" rows="4"></textarea></label>
+      <div class="row" style="margin-top:10px">
+        <button class="btn" type="submit">ส่งคะแนน</button>
+        <span id="r_msg" class="small"></span>
+      </div>
+    </form>
+  </main>
+
+  <footer class="footer">© CTR v4 • Rating</footer>
+</body>
+</html>
